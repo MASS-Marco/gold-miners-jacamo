@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_GoldMiners" targetNamespace="https://example.org/estudo/goldminers">
+  <bpmn:collaboration id="colaboracao">
+    <bpmn:participant id="equipe" name="Equipe de mineradores" processRef="processo"/>
+  </bpmn:collaboration>
+  <bpmn:process id="processo" name="Tentativa de coleta e recuperacao" isExecutable="false">
+    <bpmn:documentation>Modelo de analise proposto em 09/10/2026. Sem ligacao executavel com JaCaMo. Reavaliar a carga antes de redistribuir.</bpmn:documentation>
+    <bpmn:laneSet id="raias">
+      <bpmn:lane id="coord" name="Coordenação">
+        <bpmn:flowNodeRef>inicio</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>definir</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>reavaliar</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>continuar</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>inconclusa</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="miner" name="Minerador">
+        <bpmn:flowNodeRef>tentar</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="mundo" name="Ambiente e conferência">
+        <bpmn:flowNodeRef>conferir</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>confirmada</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>sucesso</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="inicio" name="Missão aberta">
+      <bpmn:outgoing>f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="definir" name="Definir responsável">
+      <bpmn:incoming>f1</bpmn:incoming>
+      <bpmn:incoming>f8</bpmn:incoming>
+      <bpmn:outgoing>f2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="tentar" name="Tentar coleta e entrega">
+      <bpmn:incoming>f2</bpmn:incoming>
+      <bpmn:outgoing>f3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="conferir" name="Conferir resultado">
+      <bpmn:incoming>f3</bpmn:incoming>
+      <bpmn:outgoing>f4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="confirmada" name="Entrega confirmada" default="f6">
+      <bpmn:incoming>f4</bpmn:incoming>
+      <bpmn:outgoing>f5</bpmn:outgoing>
+      <bpmn:outgoing>f6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="sucesso" name="Entrega confirmada">
+      <bpmn:incoming>f5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="reavaliar" name="Reavaliar missão e carga">
+      <bpmn:incoming>f6</bpmn:incoming>
+      <bpmn:outgoing>f7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="continuar" name="Retomar" default="f9">
+      <bpmn:incoming>f7</bpmn:incoming>
+      <bpmn:outgoing>f8</bpmn:outgoing>
+      <bpmn:outgoing>f9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="inconclusa" name="Missão inconclusiva">
+      <bpmn:incoming>f9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="f1" sourceRef="inicio" targetRef="definir"/>
+    <bpmn:sequenceFlow id="f2" sourceRef="definir" targetRef="tentar"/>
+    <bpmn:sequenceFlow id="f3" sourceRef="tentar" targetRef="conferir"/>
+    <bpmn:sequenceFlow id="f4" sourceRef="conferir" targetRef="confirmada"/>
+    <bpmn:sequenceFlow id="f5" sourceRef="confirmada" targetRef="sucesso" name="Sim">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">entrega_confirmada</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="f6" sourceRef="confirmada" targetRef="reavaliar" name="Não"/>
+    <bpmn:sequenceFlow id="f7" sourceRef="reavaliar" targetRef="continuar"/>
+    <bpmn:sequenceFlow id="f8" sourceRef="continuar" targetRef="definir" name="Sim">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">retomar</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="f9" sourceRef="continuar" targetRef="inconclusa" name="Não"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="diagrama">
+    <bpmndi:BPMNPlane id="plano" bpmnElement="colaboracao">
+      <bpmndi:BPMNShape id="shape_equipe" bpmnElement="equipe" isHorizontal="true">
+        <dc:Bounds x="20" y="20" width="1140" height="520"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_coord" bpmnElement="coord" isHorizontal="true">
+        <dc:Bounds x="50" y="20" width="1110" height="160"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_miner" bpmnElement="miner" isHorizontal="true">
+        <dc:Bounds x="50" y="180" width="1110" height="170"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_mundo" bpmnElement="mundo" isHorizontal="true">
+        <dc:Bounds x="50" y="350" width="1110" height="190"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_inicio" bpmnElement="inicio">
+        <dc:Bounds x="75" y="80" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_definir" bpmnElement="definir">
+        <dc:Bounds x="150" y="70" width="170" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_tentar" bpmnElement="tentar">
+        <dc:Bounds x="370" y="235" width="170" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_conferir" bpmnElement="conferir">
+        <dc:Bounds x="590" y="410" width="160" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_confirmada" bpmnElement="confirmada" isMarkerVisible="true">
+        <dc:Bounds x="800" y="420" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_sucesso" bpmnElement="sucesso">
+        <dc:Bounds x="1010" y="432" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_reavaliar" bpmnElement="reavaliar">
+        <dc:Bounds x="800" y="70" width="190" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_continuar" bpmnElement="continuar" isMarkerVisible="true">
+        <dc:Bounds x="1010" y="75" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_inconclusa" bpmnElement="inconclusa">
+        <dc:Bounds x="1100" y="82" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_f1" bpmnElement="f1">
+        <di:waypoint x="111" y="98"/>
+        <di:waypoint x="150" y="100"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f2" bpmnElement="f2">
+        <di:waypoint x="320" y="100"/>
+        <di:waypoint x="345" y="100"/>
+        <di:waypoint x="345" y="265"/>
+        <di:waypoint x="370" y="265"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f3" bpmnElement="f3">
+        <di:waypoint x="540" y="265"/>
+        <di:waypoint x="560" y="265"/>
+        <di:waypoint x="560" y="440"/>
+        <di:waypoint x="590" y="440"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f4" bpmnElement="f4">
+        <di:waypoint x="750" y="440"/>
+        <di:waypoint x="800" y="445"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f5" bpmnElement="f5">
+        <di:waypoint x="850" y="445"/>
+        <di:waypoint x="1010" y="450"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f6" bpmnElement="f6">
+        <di:waypoint x="825" y="420"/>
+        <di:waypoint x="825" y="300"/>
+        <di:waypoint x="900" y="300"/>
+        <di:waypoint x="900" y="130"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f7" bpmnElement="f7">
+        <di:waypoint x="990" y="100"/>
+        <di:waypoint x="1010" y="100"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f8" bpmnElement="f8">
+        <di:waypoint x="1035" y="75"/>
+        <di:waypoint x="1035" y="40"/>
+        <di:waypoint x="235" y="40"/>
+        <di:waypoint x="235" y="70"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_f9" bpmnElement="f9">
+        <di:waypoint x="1060" y="100"/>
+        <di:waypoint x="1100" y="100"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

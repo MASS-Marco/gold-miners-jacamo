@@ -1,0 +1,51 @@
+{
+  "origem": "ilustrativo",
+  "pares": [
+    {
+      "id": "aberto",
+      "referencia": {
+        "eficiencia_valor_por_acao": 0.2,
+        "eficacia_fracao_da_meta": 0.8,
+        "meta_atingida_no_prazo": false,
+        "valor_confirmado": 20,
+        "limite": "Acoes devem incluir falhas e espera; custo de mensagens e CPU e relatado separadamente."
+      },
+      "candidata": {
+        "eficiencia_valor_por_acao": 0.28888888888888886,
+        "eficacia_fracao_da_meta": 1,
+        "meta_atingida_no_prazo": true,
+        "valor_confirmado": 26,
+        "limite": "Acoes devem incluir falhas e espera; custo de mensagens e CPU e relatado separadamente."
+      },
+      "diferenca_valor_confirmado": 6,
+      "variacao_percentual": 30.0
+    },
+    {
+      "id": "gargalo",
+      "referencia": {
+        "eficiencia_valor_por_acao": 0.15,
+        "eficacia_fracao_da_meta": 0.6,
+        "meta_atingida_no_prazo": false,
+        "valor_confirmado": 15,
+        "limite": "Acoes devem incluir falhas e espera; custo de mensagens e CPU e relatado separadamente."
+      },
+      "candidata": {
+        "eficiencia_valor_por_acao": 0.23157894736842105,
+        "eficacia_fracao_da_meta": 0.88,
+        "meta_atingida_no_prazo": false,
+        "valor_confirmado": 22,
+        "limite": "Acoes devem incluir falhas e espera; custo de mensagens e CPU e relatado separadamente."
+      },
+      "diferenca_valor_confirmado": 7,
+      "variacao_percentual": 46.666666666666664
+    }
+  ],
+  "efetividade_simulada": {
+    "diferenca_media_valor_confirmado": 6.5,
+    "pares_com_melhora": 2,
+    "total_pares": 2,
+    "interpretacao": "Efeito util candidato no cenario declarado; depende de desenho comparavel e evidencia de entrega.",
+    "limite": "Nao demonstra impacto profissional, significancia estatistica ou causalidade apenas pelo calculo."
+  },
+  "status": "EXEMPLO_DIDATICO_SEM_RESULTADO_EXPERIMENTAL"
+}

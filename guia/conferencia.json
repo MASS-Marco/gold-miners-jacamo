@@ -1,0 +1,181 @@
+{
+  "data": "2026-10-09",
+  "arquivos": [
+    {
+      "arquivo": "src/agt/dummy.asl",
+      "linhas": 19,
+      "linhas_ativas": 3,
+      "sha256_texto_lf": "dd9effff10b2a7e7e95ae9c710d1c9c3627dcfa92e311ddbc092c79dca77a71d"
+    },
+    {
+      "arquivo": "src/agt/leader.asl",
+      "linhas": 24,
+      "linhas_ativas": 10,
+      "sha256_texto_lf": "d75f34d5a6aaed782371136d21541a7bed4e87151d56f054e6dce99c3d783264"
+    },
+    {
+      "arquivo": "src/agt/miner-coleta.asl",
+      "linhas": 219,
+      "linhas_ativas": 104,
+      "sha256_texto_lf": "d9e69cfa067e431742b26bd83fe24181fd4a6ba11635369dd7679fdcd971cfb9"
+    },
+    {
+      "arquivo": "src/agt/miner.asl",
+      "linhas": 90,
+      "linhas_ativas": 34,
+      "sha256_texto_lf": "6b4729f0690c24468daabf2631ab0f3d57a60205111ce4ebd9c9473773f813e1"
+    },
+    {
+      "arquivo": "src/test/agt/verificacao.asl",
+      "linhas": 31,
+      "linhas_ativas": 28,
+      "sha256_texto_lf": "7612b217adb69796c579fe2b9110d1af1d873acd4fb1982aa6794b70adf5fe4c"
+    },
+    {
+      "arquivo": "src/agt/jia/dist.java",
+      "linhas": 27,
+      "linhas_ativas": 24,
+      "sha256_texto_lf": "92e00d4aa424afb9fbda83fea7042bd5380185de2e27a28a6082feb37e8f3969"
+    },
+    {
+      "arquivo": "src/agt/jia/get_direction.java",
+      "linhas": 134,
+      "linhas_ativas": 106,
+      "sha256_texto_lf": "b60e5d592bd52d409df1fdfe1ae697c0874b7f8d30360ad76f8bc82f5d0eb08a"
+    },
+    {
+      "arquivo": "src/agt/jia/neighbour.java",
+      "linhas": 26,
+      "linhas_ativas": 22,
+      "sha256_texto_lf": "85e1febc81fe8d478b7596d416b019831d2a48512c51ca03e1424b28d411ff0b"
+    },
+    {
+      "arquivo": "src/agt/jia/random.java",
+      "linhas": 55,
+      "linhas_ativas": 43,
+      "sha256_texto_lf": "d3109e99d3f752e700dfa2d7238014b5abdd4ed07be43d2c2ee150df584580f7"
+    },
+    {
+      "arquivo": "src/agt/jia/random_direction.java",
+      "linhas": 58,
+      "linhas_ativas": 49,
+      "sha256_texto_lf": "dda9589393fb1c92d49a7c71982d185e0479dfe3cefb5dfed82922eeb2ef30f4"
+    },
+    {
+      "arquivo": "src/env/mining/MiningPlanet.java",
+      "linhas": 159,
+      "linhas_ativas": 122,
+      "sha256_texto_lf": "2f50bffb09dcd6b96f50b2b24a473643f38405b2f40fc9de9a3ba2a88d8d289b"
+    },
+    {
+      "arquivo": "src/env/mining/WorldModel.java",
+      "linhas": 507,
+      "linhas_ativas": 408,
+      "sha256_texto_lf": "b91f7ce20162dec4dd0666cf332ef89ab1e4e07272a959980cf331ecd4ef0845"
+    },
+    {
+      "arquivo": "src/env/mining/WorldView.java",
+      "linhas": 210,
+      "linhas_ativas": 162,
+      "sha256_texto_lf": "687d1d0f6f138b8ec47b75a5022c105286d294bee74d68dce94d6cddd9416033"
+    },
+    {
+      "arquivo": "src/test/java/mining/ModelChecks.java",
+      "linhas": 36,
+      "linhas_ativas": 34,
+      "sha256_texto_lf": "4ba635aeff4247965b8186910431b6de0be51758e0308af6d2a329c0314fbbf6"
+    },
+    {
+      "arquivo": "src/test/java/mining/ValidationProbe.java",
+      "linhas": 19,
+      "linhas_ativas": 15,
+      "sha256_texto_lf": "6a73da29fdf85c9e89535502f8979b21e94a21c333557ee7c69f32ff02cf6f3c"
+    },
+    {
+      "arquivo": "scripts/laboratorio.py",
+      "linhas": 162,
+      "linhas_ativas": 149,
+      "sha256_texto_lf": "c751bc6a1edc3384a572e3d65e28b85a2d8f887baa5063b1971133a2fc6a2e02"
+    },
+    {
+      "arquivo": "scripts/indicadores.py",
+      "linhas": 87,
+      "linhas_ativas": 79,
+      "sha256_texto_lf": "25b6a69867451f75d64422668d142b8ea62eda9213260c7f2f5fe940fc0a39e8"
+    },
+    {
+      "arquivo": "scripts/verificar_indicadores.py",
+      "linhas": 38,
+      "linhas_ativas": 36,
+      "sha256_texto_lf": "4aa7115df340e3f2c7cf1488568e5e04750938abe9986796fc6bd17fa84cfc2a"
+    },
+    {
+      "arquivo": "build.gradle",
+      "linhas": 35,
+      "linhas_ativas": 35,
+      "sha256_texto_lf": "3d89641c8c7e2352ad266d92e50072f14fc27cb82884e21cff68be115e002f89"
+    },
+    {
+      "arquivo": "settings.gradle",
+      "linhas": 1,
+      "linhas_ativas": 1,
+      "sha256_texto_lf": "7c172ba26c3af321f813130f88d2e42538c21417b398947d328101f6571b4b86"
+    },
+    {
+      "arquivo": "gold_miners.jcm",
+      "linhas": 38,
+      "linhas_ativas": 21,
+      "sha256_texto_lf": "d90e21de49194ab409f5613246ad97e68371213f4466b05a9cf42355eeec1797"
+    },
+    {
+      "arquivo": "configuracoes/verificacao.jcm",
+      "linhas": 9,
+      "linhas_ativas": 9,
+      "sha256_texto_lf": "c58dccab66f33ebf742a1c45e7f60a635c85d75653e1c140e1887249c5af74bc"
+    },
+    {
+      "arquivo": "laboratorio.cmd",
+      "linhas": 9,
+      "linhas_ativas": 9,
+      "sha256_texto_lf": "9985da3627c4e8c87040dbaae18b1b3eae8ec9b6ec3e69446119f1fdc87fd948"
+    },
+    {
+      "arquivo": ".devcontainer/devcontainer.json",
+      "linhas": 9,
+      "linhas_ativas": 9,
+      "sha256_texto_lf": "e9abd9728d17a34be78157997f844a13d3fb2b30f457ce44c3132ca497666b40"
+    },
+    {
+      "arquivo": "logging.properties",
+      "linhas": 49,
+      "linhas_ativas": 16,
+      "sha256_texto_lf": "d16a04a06e782e9349cb938a24a0c2017b4c2e847c66f01c0ed27c63c68ac140"
+    }
+  ],
+  "pdfs": {
+    "Guia-do-Laboratorio": {
+      "paginas": 6,
+      "blocos_conferidos": 92,
+      "ausentes": [],
+      "viewports_offline": [
+        390,
+        768,
+        1440
+      ],
+      "erros_javascript": []
+    },
+    "Codigo-Comentado": {
+      "paginas": 79,
+      "blocos_conferidos": 3056,
+      "ausentes": [],
+      "viewports_offline": [
+        390,
+        768,
+        1440
+      ],
+      "erros_javascript": []
+    }
+  },
+  "total_linhas": 2051,
+  "linhas_ativas_com_explicacao": 1528
+}

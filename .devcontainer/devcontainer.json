@@ -1,0 +1,9 @@
+{
+  "name": "Gold Miners — JaCaMo",
+  "image": "mcr.microsoft.com/devcontainers/java:21-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" }
+  },
+  "postCreateCommand": "python3 scripts/laboratorio.py compilar",
+  "remoteUser": "vscode"
+}

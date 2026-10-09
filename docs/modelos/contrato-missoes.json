@@ -1,0 +1,47 @@
+{
+  "versao": "0.1-proposta",
+  "status": "modelo_de_analise_nao_implementado",
+  "data": "2026-10-09",
+  "campos_evento": [
+    "partida",
+    "equipe",
+    "agente",
+    "recurso",
+    "missao",
+    "tentativa",
+    "passo",
+    "tipo",
+    "id_evento"
+  ],
+  "estados_missao": [
+    "aberta",
+    "reservada",
+    "em_coleta",
+    "em_transporte",
+    "entregue",
+    "a_reavaliar",
+    "inconclusiva"
+  ],
+  "identidade": "Um recurso novo tem identidade nova mesmo que apareca na mesma celula.",
+  "invariantes": [
+    "Reserva concedida atomicamente",
+    "No maximo um portador por recurso",
+    "Entrega pontuada uma unica vez pelo ambiente",
+    "Mensagem de tentativa antiga nao conclui tentativa nova",
+    "Mudanca de responsavel nao transfere a carga fisica"
+  ],
+  "fontes_de_evidencia": {
+    "deposito": "evento do ambiente vinculado a recurso e tentativa",
+    "decisao": "registro da politica do agente",
+    "compromisso": "estado organizacional quando integrado"
+  },
+  "recuperacao": {
+    "antes_da_coleta": "Reavaliar disponibilidade, encerrar reserva anterior e atribuir nova tentativa.",
+    "apos_coleta": "Confirmar carga e portador; definir rota alternativa ou devolucao permitida; nao reassociar ficticiamente o recurso."
+  },
+  "condicoes_de_fim": [
+    "entrega confirmada por evento valido",
+    "encerramento inconclusivo com motivo"
+  ],
+  "limite": "Nao e schema executado pelo tutorial nem configuracao XML Moise."
+}

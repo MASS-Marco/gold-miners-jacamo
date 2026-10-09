@@ -1,0 +1,34 @@
+{
+  "data_utc": "2026-10-09T15:39:48.255333+00:00",
+  "status": "aprovado",
+  "verificacoes_modelo": 10,
+  "integracao": "Jason e CArtAgO executaram percepcao, movimento, coleta e deposito; estado conferido por observador de teste.",
+  "limite": "Nao e campeonato, comparacao de estrategias nem implementacao MAPC 2006 completa.",
+  "marcadores": [
+    "PERCEPTION|gold=1,1",
+    "PICK|carrying=true",
+    "WORLD_VERIFIED|deposited=1|carrying=false|conservation=ok",
+    "END|status=ok"
+  ],
+  "fontes_sha256": {
+    "build.gradle": "3d89641c8c7e2352ad266d92e50072f14fc27cb82884e21cff68be115e002f89",
+    "configuracoes/verificacao.jcm": "c58dccab66f33ebf742a1c45e7f60a635c85d75653e1c140e1887249c5af74bc",
+    "logging.properties": "d16a04a06e782e9349cb938a24a0c2017b4c2e847c66f01c0ed27c63c68ac140",
+    "scripts/laboratorio.py": "c751bc6a1edc3384a572e3d65e28b85a2d8f887baa5063b1971133a2fc6a2e02",
+    "src/agt/dummy.asl": "dd9effff10b2a7e7e95ae9c710d1c9c3627dcfa92e311ddbc092c79dca77a71d",
+    "src/agt/jia/dist.java": "92e00d4aa424afb9fbda83fea7042bd5380185de2e27a28a6082feb37e8f3969",
+    "src/agt/jia/get_direction.java": "b60e5d592bd52d409df1fdfe1ae697c0874b7f8d30360ad76f8bc82f5d0eb08a",
+    "src/agt/jia/neighbour.java": "85e1febc81fe8d478b7596d416b019831d2a48512c51ca03e1424b28d411ff0b",
+    "src/agt/jia/random.java": "d3109e99d3f752e700dfa2d7238014b5abdd4ed07be43d2c2ee150df584580f7",
+    "src/agt/jia/random_direction.java": "dda9589393fb1c92d49a7c71982d185e0479dfe3cefb5dfed82922eeb2ef30f4",
+    "src/agt/leader.asl": "d75f34d5a6aaed782371136d21541a7bed4e87151d56f054e6dce99c3d783264",
+    "src/agt/miner-coleta.asl": "d9e69cfa067e431742b26bd83fe24181fd4a6ba11635369dd7679fdcd971cfb9",
+    "src/agt/miner.asl": "6b4729f0690c24468daabf2631ab0f3d57a60205111ce4ebd9c9473773f813e1",
+    "src/env/mining/MiningPlanet.java": "49de720f137622007553ef6fc7bd4ea252dfb4c57a515cdd779c961fd6c54bdb",
+    "src/env/mining/WorldModel.java": "b91f7ce20162dec4dd0666cf332ef89ab1e4e07272a959980cf331ecd4ef0845",
+    "src/env/mining/WorldView.java": "687d1d0f6f138b8ec47b75a5022c105286d294bee74d68dce94d6cddd9416033",
+    "src/test/agt/verificacao.asl": "7612b217adb69796c579fe2b9110d1af1d873acd4fb1982aa6794b70adf5fe4c",
+    "src/test/java/mining/ModelChecks.java": "4ba635aeff4247965b8186910431b6de0be51758e0308af6d2a329c0314fbbf6",
+    "src/test/java/mining/ValidationProbe.java": "6a73da29fdf85c9e89535502f8979b21e94a21c333557ee7c69f32ff02cf6f3c"
+  }
+}

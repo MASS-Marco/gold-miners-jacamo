@@ -1,0 +1,168 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guia do laboratório Gold Miners</title><style>:root{--ink:#203441;--muted:#526b78;--accent:#126e73;--line:#d7e3e7;--scale:1;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}body{margin:0;background:#eef3f5;color:var(--ink);font:calc(17px * var(--scale))/1.65 'Segoe UI',Arial,sans-serif}
+a{color:#096976;text-underline-offset:3px;overflow-wrap:anywhere}a:hover{color:#073d47}p{margin:12px 0}strong{font-weight:650}
+.skip{position:absolute;top:-80px;left:12px;z-index:10;background:#fff;padding:10px}.skip:focus{top:10px}.toolbar{background:#203b49;color:white;position:sticky;top:0;z-index:5;box-shadow:0 2px 10px #17324318}.toolbar-inner{max-width:1130px;margin:auto;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+nav,.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}nav a{color:white;font-size:13px;text-decoration:none}nav a:hover{color:#bcf1e5}nav .home-link{padding-right:7px;border-right:1px solid #6b828e}
+button,.pdf-link{font:600 13px 'Segoe UI',Arial,sans-serif;border:1px solid #809ba8;background:transparent;color:white;border-radius:5px;cursor:pointer;padding:7px 10px;text-decoration:none}button:hover,.pdf-link:hover{background:#385664;color:white}a:focus-visible,button:focus-visible{outline:3px solid #b98516;outline-offset:3px}
+main{max-width:995px;margin:32px auto;padding:0 24px}.sheet{background:white;border:1px solid var(--line);border-radius:12px;padding:36px 42px;margin:0 0 26px;box-shadow:0 4px 18px #1c303b0b}.intro{border-bottom:1px solid var(--line);margin-bottom:23px;padding-bottom:14px}
+.eyebrow,.number{color:var(--accent);font-size:12px;letter-spacing:.09em;font-weight:750;text-transform:uppercase}.eyebrow{margin:0 0 12px}.number{display:block;margin-bottom:7px}h1{font-size:35px;line-height:1.17;letter-spacing:-.025em;margin:0 0 16px}h2{font-size:27px;line-height:1.25;margin:0 0 16px;letter-spacing:-.015em;color:#173e50}h3{font-size:19px;line-height:1.35;margin:24px 0 9px;color:var(--accent)}.intro p{font-size:.9em;line-height:1.55}.intro p:last-child{font-size:.8em;color:var(--muted)}
+blockquote{border-left:4px solid #16877e;border-radius:0 6px 6px 0;background:#edf6f3;margin:19px 0 8px;padding:13px 17px}blockquote p{margin:0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:.9em;line-height:1.5;table-layout:fixed}th{background:#eaf0f4;color:#244555;text-align:left;font-weight:700}th,td{padding:10px 11px;border:1px solid #d6e1e6;vertical-align:top;overflow-wrap:anywhere}tbody tr:nth-child(even){background:#f8fafb}th:first-child,td:first-child{width:28%}table.page-map th:first-child,table.page-map td:first-child{width:54%}
+ul,ol{padding-left:23px}li{margin:8px 0}code{font:90% Consolas,'Courier New',monospace;background:#edf2f5;padding:1px 4px;border-radius:3px}
+.scenario-picker{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.scenario-picker button{color:#25414f;background:#f0f5f7;border-color:#bbd2da;text-align:left;line-height:1.4}.scenario-picker button[aria-pressed="true"]{background:#156e74;border-color:#156e74;color:white}.case-panel{border:1px solid #cadddf;background:#f4f9f8;border-radius:7px;padding:16px 19px;margin:14px 0}.case-panel h3{margin-top:0;font-size:18px}.case-panel p{margin:9px 0}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:21px 0}.flow>div{position:relative;background:#f2f8f8;border:1px solid #cbdfe2;border-radius:7px;padding:13px 12px}.flow>div:not(:last-child):after{content:'→';position:absolute;right:-15px;top:41%;color:#15787a;font-weight:700}.flow strong{display:block;color:#126e73;font-size:15px}.flow span{display:block;font-size:13px;line-height:1.45;margin-top:5px;color:var(--muted)}
+.notice{padding:14px 18px;border:1px solid #d7ddc4;background:#f8f8ef;border-radius:8px;font-size:.95em}.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{border:1px solid var(--line);border-radius:8px;padding:22px;background:#f9fbfc}.card h3{margin:5px 0 12px;font-size:23px}.card p{font-size:.93em}.card .number{margin-bottom:2px}.card .action{display:inline-block;font-weight:650;margin-right:18px;padding:3px 0}.lead{font-size:1.08em}.screen-footer{font-size:13px;text-align:center;color:var(--muted);padding:4px 20px 30px}.credit{font-size:.84em;color:var(--muted)}.reading-links{display:flex;gap:15px;flex-wrap:wrap;font-weight:600}
+@media(max-width:650px){body{font-size:calc(16px * var(--scale))}.toolbar-inner{padding:10px 14px;gap:10px}nav{gap:8px 11px}nav a{font-size:12px}.controls{gap:7px}main{padding:0 12px;margin:16px auto}.sheet{padding:24px 21px;margin-bottom:18px}h1{font-size:29px}h2{font-size:25px}h3{font-size:18px}th,td{padding:8px 6px;font-size:.91em}.flow{grid-template-columns:1fr;gap:15px}.flow>div:not(:last-child):after{content:'↓';top:auto;bottom:-18px;right:50%;line-height:18px}.cards{grid-template-columns:1fr;gap:14px}.card{padding:18px}.card h3{font-size:22px}html{scroll-padding-top:185px}}
+@page{size:A4;margin:16mm 17mm 16mm}
+@media print{
+html{scroll-behavior:auto}body{background:white;font-size:10.7pt;line-height:1.44;color:#203441;print-color-adjust:exact;-webkit-print-color-adjust:exact}.toolbar,.skip,.screen-footer{display:none!important}main{margin:0;padding:0;max-width:none}.sheet{padding:0;margin:0;border:0;border-radius:0;box-shadow:none;break-before:page}.sheet:first-child{break-before:auto}
+.intro{padding-bottom:9px;margin-bottom:14px}.eyebrow{font-size:8pt;margin-bottom:7px}.number{font-size:8pt;margin-bottom:6px}h1{font-size:23pt;line-height:1.15;margin:0 0 10px}h2{font-size:18.5pt;line-height:1.22;margin:0 0 11px}h3{font-size:11.2pt;line-height:1.3;margin:18px 0 7px;break-after:avoid}.intro p{font-size:9pt;margin:5px 0}.intro p:last-child{font-size:8.5pt}.sheet:first-child h3{margin-top:13px}p{margin:7px 0;orphans:3;widows:3}table{font-size:9.35pt;line-height:1.4;margin:12px 0;break-inside:avoid}th,td{padding:9px 10px}thead{display:table-header-group}tr{break-inside:avoid}blockquote{padding:11px 14px;margin:13px 0 8px;font-size:10pt;line-height:1.45;break-inside:avoid}li{break-inside:avoid;margin:8px 0}
+.flow{gap:13px;margin:14px 0;grid-template-columns:repeat(4,1fr);break-inside:avoid}.flow>div{padding:10px 9px}.flow strong{font-size:9.4pt}.flow span{font-size:8.3pt}.flow>div:not(:last-child):after{content:'→';top:40%;right:-13px;bottom:auto}a{color:#006a76;text-decoration:none}.credit{font-size:9pt}.notice{font-size:10pt}.cards{gap:12px}.card{break-inside:avoid;padding:12px}.card h3{font-size:14pt}.reading-links{font-size:10pt}
+.scenario-picker{display:none!important}.case-panel,.case-panel[hidden]{display:block!important;padding:10px 13px;margin:11px 0;break-inside:avoid}.case-panel h3{font-size:10.5pt;margin:0 0 6px}.case-panel p{font-size:10pt;line-height:1.4;margin:6px 0}
+}
+
+img{display:block;max-width:100%;height:auto;margin:18px auto}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf2f5;border-radius:7px;padding:13px;font-size:.86em;line-height:1.5}pre code{padding:0;background:none}code{overflow-wrap:anywhere}
+@media print{pre{font-size:8.9pt;padding:9px;break-inside:avoid}img{max-height:93mm;object-fit:contain;margin:12px auto}th,td{padding:8px 9px}table{font-size:9.2pt;line-height:1.35}}
+
+.lab-access{display:flex;gap:24px;align-items:center;flex-wrap:wrap;border:1px solid #c6dce0;border-radius:9px;padding:20px;margin:20px 0}.lab-access img{width:150px;height:150px;margin:0;flex-shrink:0}.lab-access>div{flex:1;min-width:190px}.lab-button{display:inline-block;padding:11px 18px;border-radius:6px;background:#126e73;color:white;text-decoration:none;font-weight:650}.lab-button:hover{background:#0c4e53;color:white}@media print{.lab-access{padding:15px;gap:20px;break-inside:avoid}.lab-access img{width:35mm;height:35mm}.lab-button{padding:8px 12px}}
+</style></head><body><header class="toolbar"><div class="toolbar-inner"><nav><a href="Guia-do-Laboratorio.html">Guia</a><a href="Codigo-Comentado.html">Código por linha</a><a href="https://github.com/MASS-Marco/gold-miners-jacamo">GitHub</a></nav><div class="controls"><button id="font" type="button" aria-pressed="false">Aumentar fonte</button><button id="print" type="button">Imprimir</button></div></div></header><main><section class="sheet" id="parte-1"><header class="intro"><h1>Vamos conhecer o Gold Miners</h1>
+<p>Guia de estudo e experimentação · Marco Aurélio Santos de Souza<br />
+Projeto individual de Sistemas Multiagentes · UFSC · Prof. Jomi F. Hübner · 2026.2</p>
+</header><h2>Uma primeira conversa sobre o projeto</h2>
+<p>Você não precisa conhecer a história deste trabalho para começar. Imagine um pequeno grupo procurando ouro e levando cada peça até um depósito. Há um mapa, obstáculos e outros mineradores. Cada agente precisa escolher o que fazer e acompanhar o resultado de suas ações.</p>
+<p>O interesse está nas decisões: continuar explorando ou recolher uma peça já conhecida? Dividir uma descoberta com os colegas? Desistir de uma rota que deixou de funcionar? Essas perguntas aproximam o jogo dos problemas de coordenação que encontramos em sistemas de software.</p>
+<h3>O que você consegue experimentar agora</h3>
+<p>Esta primeira versão executa o tutorial JaCaMo, com exploração, coleta e depósito. Inclui uma verificação pequena e controlada, além de uma sessão com quatro mineradores. A competição entre duas equipes, a coordenação por reservas e a organização Moise são próximas etapas, descritas no plano de evolução.</p>
+<p>O código inicial vem do tutorial oficial. João Leite adaptou o exemplo a partir do trabalho de Rafael Bordini, Jomi Hübner e Maicon Zatelli. Os créditos continuam preservados. As contribuições desta preparação estão nas correções documentadas, na execução controlada, nas verificações e no desenho de investigação.</p>
+<h3>Por onde seguir</h3>
+<p>Leia primeiro este guia. Depois, abra o <a href="Codigo-Comentado.html">código explicado linha por linha</a>. Você encontrará cada arquivo do núcleo de execução com o trecho original ao lado da explicação em português. As linhas mantêm a numeração do arquivo para facilitar a navegação no editor.</p>
+<p>O apêndice cobre agentes, ações internas, ambiente, visualização, testes, lançador e configurações. Comentários originais e linhas vazias podem ser ocultados na tela. Bibliotecas, arquivos gerados e o Gradle Wrapper não são tratados como código escrito para o projeto.</p>
+<div class="lab-access"><img src="QR-Laboratorio.png" alt="QR code para acessar o laboratório"><div><p><a class="lab-button" href="https://github.com/MASS-Marco/gold-miners-jacamo">Abrir laboratório no GitHub</a></p><p><a href="https://github.com/MASS-Marco/gold-miners-jacamo">github.com/MASS-Marco/gold-miners-jacamo</a></p></div></div>
+
+</section><section class="sheet" id="parte-2"><h2>Preparar e executar com calma</h2>
+<h3>No navegador</h3>
+<p>Abra o repositório e use o botão <strong>Abrir no GitHub Codespaces</strong>. Esse recurso usa sua conta GitHub e prepara um ambiente de desenvolvimento conforme a configuração do projeto. Depois da preparação, abra o terminal e execute:</p>
+<pre><code class="language-text">python3 scripts/laboratorio.py validar
+python3 scripts/laboratorio.py executar --modo coletar --cenario 3 --segundos 15
+</code></pre>
+<p>A configuração de contêiner está incluída. As verificações documentadas foram executadas em Windows; a execução no Codespaces ainda não foi conferida.</p>
+<h3>No computador</h3>
+<p>Você pode usar <strong>Code → Download ZIP</strong> ou clonar o repositório. Prepare Java 21 e Python 3.10 ou superior. Na pasta do projeto, o comando Windows é:</p>
+<pre><code class="language-powershell">.\laboratorio.cmd validar
+</code></pre>
+<p>No acervo local de Marco, o lançador encontra automaticamente o Java isolado e o Python já preparados para a disciplina. Em outra máquina, ele usa <code>JAVA_HOME</code> ou o Java disponível no sistema. O Gradle e as dependências poderão ser baixados na primeira utilização.</p>
+<h3>O que observar</h3>
+<p>Ao final da verificação, procure <code>VERIFICACAO_GOLD_MINERS_APROVADA</code>. Essa mensagem só aparece depois de conferir regras do modelo e uma entrega executada por um agente. Se houver falha, abra a pasta de registros indicada pelo comando.</p>
+<p>Na sessão de estudo, o processo termina após o tempo solicitado. Isso é esperado. Para ver o mapa em uma máquina com interface gráfica, acrescente <code>--interface</code>. A execução gráfica foi preservada para estudo, mas não fez parte da conferência desta preparação.</p>
+</section><section class="sheet" id="parte-3"><h2>Entender a linguagem dos agentes</h2>
+<p>AgentSpeak representa crenças, objetivos e planos. Pense numa crença como uma informação que o agente possui naquele momento. Ela pode vir da percepção ou de seu próprio raciocínio, e pode ficar desatualizada.</p>
+<table>
+<thead>
+<tr>
+  <th>Escrita</th>
+  <th>Como ler no exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>free.</code></td>
+  <td>O agente começa acreditando que está disponível.</td>
+</tr>
+<tr>
+  <td><code>!pos(X,Y)</code></td>
+  <td>Tentar alcançar exatamente a posição X,Y. O ponto de exclamação introduz um objetivo.</td>
+</tr>
+<tr>
+  <td><code>+!pos(X,Y)</code></td>
+  <td>Um plano pode reagir à adoção desse objetivo.</td>
+</tr>
+<tr>
+  <td><code>: pos(X,Y)</code></td>
+  <td>Contexto do plano: essa informação precisa ser satisfeita para selecionar a alternativa.</td>
+</tr>
+<tr>
+  <td><code>&lt;-</code></td>
+  <td>Começo do corpo do plano, com as ações e os subobjetivos.</td>
+</tr>
+<tr>
+  <td><code>?carrying_gold</code></td>
+  <td>Conferir na base de crenças se o agente está carregando ouro.</td>
+</tr>
+<tr>
+  <td><code>-+last_dir(D)</code></td>
+  <td>Substituir a crença anterior sobre a última direção.</td>
+</tr>
+<tr>
+  <td><code>!!handle(Gold)</code></td>
+  <td>Criar uma intenção separada para tratar a coleta.</td>
+</tr>
+</tbody>
+</table>
+<p>Os termos X e Y começam com maiúscula e funcionam como variáveis. Palavras como <code>free</code>, <code>gold</code> e <code>pick</code> são símbolos do programa. O nome ajuda a leitura, mas quem define seu significado operacional são os planos e as operações correspondentes.</p>
+<h3>Um detalhe que faz diferença</h3>
+<p><code>pos(X,Y)</code> é uma crença sobre a posição atual. <code>!pos(X,Y)</code> é um objetivo de chegar lá. A mesma escrita básica aparece nos dois casos, mas o prefixo muda o papel da expressão.</p>
+<p>No agente de coleta, planos marcados com <code>atomic</code> evitam intercalar outras intenções daquele agente durante uma preparação curta. Isso não transforma automaticamente toda a coleta numa operação indivisível entre vários agentes. A reserva compartilhada de um alvo exigirá uma operação própria no artefato.</p>
+</section><section class="sheet" id="parte-4"><h2>Acompanhar uma entrega de ponta a ponta</h2>
+<p>Vamos seguir a verificação incluída no laboratório. O agente de teste começa em 1,0, percebe ouro em 1,1 e segue um percurso conhecido. Ele desce, coleta, sobe, vai à esquerda e deposita em 0,0. O teste é pequeno de propósito: fica fácil reconhecer onde cada responsabilidade aparece.</p>
+<table>
+<thead>
+<tr>
+  <th>Arquivo</th>
+  <th>O que procurar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>configuracoes/verificacao.jcm</code></td>
+  <td>O agente de teste, seu artefato de percepção e o observador de confirmação.</td>
+</tr>
+<tr>
+  <td><code>src/test/agt/verificacao.asl</code></td>
+  <td>A sequência de ações e as esperas por posição e carga.</td>
+</tr>
+<tr>
+  <td><code>MiningPlanet.java</code></td>
+  <td>Operações <code>down</code>, <code>pick</code> e <code>drop</code>, seguidas da atualização das percepções.</td>
+</tr>
+<tr>
+  <td><code>WorldModel.java</code></td>
+  <td>Retirada do ouro do mapa, registro da carga e incremento do total depositado.</td>
+</tr>
+<tr>
+  <td><code>ValidationProbe.java</code></td>
+  <td>Conferência de um depósito, carga vazia e conservação do recurso.</td>
+</tr>
+</tbody>
+</table>
+<h3>Por que conferir o mundo</h3>
+<p>Uma mensagem como “vou coletar” mostra a intenção. Uma mensagem de conclusão do agente mostra o que ele relata. A verificação procura também a alteração correspondente no modelo do mundo. Esse cuidado será importante quando houver atrasos, tentativas repetidas e mais de uma equipe.</p>
+<p>O método <code>move</code> da base retorna <code>true</code> mesmo quando não muda a posição por encontrar uma célula ocupada. Por isso, a verificação observa a posição atingida. Um valor de retorno isolado não substitui o entendimento do método.</p>
+<p>Na coleta do tutorial, <code>get_direction</code> consulta o modelo global. Isso ajuda o exemplo a encontrar caminhos, mas deve mudar antes de afirmar que as estratégias competem com informação local. O observador de teste pode inspecionar o mundo inteiro; a política do agente deve respeitar a informação permitida.</p>
+</section><section class="sheet" id="parte-5"><h2>Três exercícios para aprender fazendo</h2>
+<h3>1 Explorar é diferente de coletar</h3>
+<p>Execute uma sessão com <code>--modo explorar --cenario 1</code> e outra com <code>--modo coletar --cenario 3</code>. Abra os arquivos <code>miner.asl</code> e <code>miner-coleta.asl</code>. Tente localizar onde a segunda versão reage à descoberta de ouro e adota a tarefa de entrega.</p>
+<p><strong>Pista para conferir:</strong> a exploração escolhe destinos para visitar. A coleta acrescenta memória de ouro conhecido, tratamento do alvo, verificação de carga e retorno ao depósito. Mover-se bastante não demonstra que o objetivo coletivo foi cumprido.</p>
+<h3>2 O depósito mudou de lugar</h3>
+<p>Encontre as referências a <code>pos(0,0)</code> no agente de coleta. O ambiente também fornece a crença <code>depot(_,X,Y)</code>. Como o plano poderia buscar essas coordenadas em vez de supor sempre 0,0?</p>
+<p><strong>Pista para conferir:</strong> a localização deve ser consultada antes de escolher o destino e antes de testar a condição de depósito. Depois, crie uma verificação com depósito deslocado. O lançador atual restringe a coleta aos cenários 1–3; sua ampliação deve acompanhar a correção do agente e o teste correspondente.</p>
+<h3>3 Duas pessoas querem a mesma tarefa</h3>
+<p>Imagine dois agentes tentando reservar o mesmo recurso ao mesmo tempo. Desenhe o estado do quadro antes e depois das duas solicitações. Qual deles recebeu a reserva? O que o outro observa? Quando a reserva pode voltar a ficar disponível?</p>
+<p><strong>Pista para conferir:</strong> conceder a reserva deve ser uma operação indivisível. Uma versão da tentativa ajuda a rejeitar mensagens atrasadas. Se o ouro já foi coletado, a redistribuição precisa considerar a carga real.</p>
+<h3>Registrar o aprendizado</h3>
+<p>Depois de cada exercício, escreva três frases: o que esperava, o que aconteceu e o que verificou para chegar à conclusão. Guarde a configuração e os registros. Antes de salvar uma etapa no Git, examine <code>git diff</code> e repita a verificação afetada pela mudança.</p>
+</section><section class="sheet" id="parte-6"><h2>Da prática à organização e aos experimentos</h2>
+<p>O próximo núcleo será uma competição entre duas equipes. Primeiro virá a coleta independente, depois a coordenação com um quadro de reservas. A organização Moise será uma etapa posterior, mantendo os critérios de decisão comparáveis.</p>
+<p>O modelo BPMN disponível em <a href="../docs/modelos/README.md">docs/modelos</a> representa uma tentativa, a conferência do resultado e a reavaliação. Ele é um modelo de análise, sem execução em motor de processos. O contrato de missões é uma proposta; ainda não descreve eventos emitidos pelo tutorial.</p>
+<h3>Uma pergunta para levar ao experimento</h3>
+<p>Se a coordenação evitar três viagens repetidas, mas obrigar todos a esperar muito para reservar um alvo, ela ainda compensa? Para responder, precisamos medir o que foi entregue e o esforço consumido. Vitória, quantidade coletada, valor depositado e tempo de processamento respondem perguntas diferentes.</p>
+<p>O protocolo em <code>experimentos/protocolo.json</code> propõe uma campanha futura. Não contém resultados de partidas já realizadas. As evidências atuais se limitam às verificações funcionais e à sessão de estudo.</p>
+<h3>Eficiência eficácia e efetividade</h3>
+<p>Eficiência relaciona valor entregue e ações consumidas. Eficácia verifica o cumprimento da meta no prazo. Efetividade simulada investiga a melhora útil em relação a uma referência comparável, inclusive sob perturbações. Robustez ajuda a sustentar esse resultado, mas não substitui a avaliação do efeito obtido. Impacto em transporte ou homologação exigiria outra investigação.</p>
+<p>Execute <code>python scripts/indicadores.py experimentos/exemplo-indicadores.json</code> para acompanhar os cálculos. Os números são didáticos e permanecem identificados como <code>ilustrativo</code>. O módulo recebe registros; a coleta automática das métricas do simulador ainda será implementada. As fórmulas e os casos de erro são conferidos por <code>python scripts/verificar_indicadores.py</code>.</p>
+<h3>Quando algo não funcionar</h3>
+<p>Se o Java não for encontrado, confira a versão e <code>JAVA_HOME</code> no terminal utilizado. Se a compilação falhar ao obter dependências, preserve a mensagem e verifique o acesso à fonte indicada. Se um agente ficar parado, procure sua posição, intenção ativa e último efeito observado, antes de alterar a estratégia.</p>
+<p>A ação interna <code>random_direction</code> é uma alternativa antiga preservada no pacote e não é usada pelos mineradores executados aqui. Sua lógica de coordenadas precisa de revisão antes de adotá-la. Esse é um exemplo de por que estar presente no projeto não significa já ter sido validado em todas as situações.</p>
+<h3>Referências para continuar</h3>
+<p><a href="https://jacamo-lang.github.io/jacamo/tutorials/gold-miners/readme.html">Tutorial Gold Miners</a> · <a href="https://multiagentcontest.org/2006/">MAPC 2006</a> · <a href="https://github.com/moise-lang/moise/blob/main/doc/ora4mas/readme.adoc">Documentação ORA4MAS</a> · <a href="https://www.omg.org/spec/BPMN/2.0.2/">OMG BPMN</a> · <a href="https://ceur-ws.org/Vol-2706/paper11.pdf">Cossentino, Lopes e Sabatucci, 2020</a>.</p>
+<p>Essas fontes têm funções diferentes: tutorial de programação, regras históricas, documentação de plataforma, especificação de notação e artigo de pesquisa. A relação BPMN–Moise possui antecedentes; o interesse do projeto é estudar sua aplicação e seus limites neste ambiente.</p>
+</section></main><script>document.querySelector('#print').onclick=()=>window.print();document.querySelector('#font').onclick=function(){const b=this.getAttribute('aria-pressed')!=='true';document.documentElement.style.setProperty('--scale',b?'1.12':'1');this.setAttribute('aria-pressed',String(b));};</script></body></html>

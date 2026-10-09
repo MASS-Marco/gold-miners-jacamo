@@ -1,0 +1,94 @@
+{
+  "data": "2026-10-09",
+  "zip_origem": "https://raw.githubusercontent.com/jacamo-lang/jacamo/main/doc/tutorials/gold-miners/initial-gold-miners.zip",
+  "sha256_zip": "b5d2e486645cb48571b30d86a0ffcc343c33a5a797a71dbd32fc025f5af66d7c",
+  "arquivos": [
+    {
+      "arquivo": "logging.properties",
+      "sha256_original": "fa3c4a59910142d0a9f2decc353d719942e05775f0cc065908c7093f113a4576"
+    },
+    {
+      "arquivo": "gradlew",
+      "sha256_original": "734b3879d3501dce471cf0522d3bcbafe76873d9fc5129345b67fb43bd15e933"
+    },
+    {
+      "arquivo": "gold_miners.jcm",
+      "sha256_original": "c3e43d8af570b7aeb5779940292fb34cc3db46ab67a62fef1825db25f10b0e04"
+    },
+    {
+      "arquivo": "gradlew.bat",
+      "sha256_original": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    {
+      "arquivo": "lib/search.jar",
+      "sha256_original": "290e21c7300c74e16f1eb620f92bbed5c3a87adf2f9e6a5d8f595c0b9ae2b34e"
+    },
+    {
+      "arquivo": "gradle/wrapper/gradle-wrapper.jar",
+      "sha256_original": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+    },
+    {
+      "arquivo": "gradle/wrapper/gradle-wrapper.properties",
+      "sha256_original": "cdab1ffb439219b1db125e3c99a86cf2424f8762b9b3faa404ed061e3635ecde"
+    },
+    {
+      "arquivo": "src/agt/leader.asl",
+      "sha256_original": "d75f34d5a6aaed782371136d21541a7bed4e87151d56f054e6dce99c3d783264"
+    },
+    {
+      "arquivo": "src/agt/dummy.asl",
+      "sha256_original": "dd9effff10b2a7e7e95ae9c710d1c9c3627dcfa92e311ddbc092c79dca77a71d"
+    },
+    {
+      "arquivo": "src/agt/miner.asl",
+      "sha256_original": "6b4729f0690c24468daabf2631ab0f3d57a60205111ce4ebd9c9473773f813e1"
+    },
+    {
+      "arquivo": "src/agt/jia/dist.java",
+      "sha256_original": "92e00d4aa424afb9fbda83fea7042bd5380185de2e27a28a6082feb37e8f3969"
+    },
+    {
+      "arquivo": "src/agt/jia/random.java",
+      "sha256_original": "d3109e99d3f752e700dfa2d7238014b5abdd4ed07be43d2c2ee150df584580f7"
+    },
+    {
+      "arquivo": "src/agt/jia/random_direction.java",
+      "sha256_original": "dda9589393fb1c92d49a7c71982d185e0479dfe3cefb5dfed82922eeb2ef30f4"
+    },
+    {
+      "arquivo": "src/agt/jia/get_direction.java",
+      "sha256_original": "b60e5d592bd52d409df1fdfe1ae697c0874b7f8d30360ad76f8bc82f5d0eb08a"
+    },
+    {
+      "arquivo": "src/agt/jia/neighbour.java",
+      "sha256_original": "85e1febc81fe8d478b7596d416b019831d2a48512c51ca03e1424b28d411ff0b"
+    },
+    {
+      "arquivo": "src/env/mining/WorldView.java",
+      "sha256_original": "687d1d0f6f138b8ec47b75a5022c105286d294bee74d68dce94d6cddd9416033"
+    },
+    {
+      "arquivo": "src/env/mining/MiningPlanet.java",
+      "sha256_original": "4adb2262ce687531e2310ccfa7f32e8eb6802f5d68eb3e3cd3ebed4f97ba9a66"
+    },
+    {
+      "arquivo": "src/env/mining/WorldModel.java",
+      "sha256_original": "b91f7ce20162dec4dd0666cf332ef89ab1e4e07272a959980cf331ecd4ef0845"
+    },
+    {
+      "arquivo": "src/agt/miner-coleta.asl",
+      "origem": "https://raw.githubusercontent.com/jacamo-lang/jacamo/main/doc/tutorials/gold-miners/solutions/miner1.asl",
+      "sha256_original": "d9e69cfa067e431742b26bd83fe24181fd4a6ba11635369dd7679fdcd971cfb9"
+    },
+    {
+      "arquivo": "licenses/JaCaMo-LGPL-3.0.txt",
+      "origem": "https://raw.githubusercontent.com/jacamo-lang/jacamo/main/LICENSE",
+      "sha256_original": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "arquivo": "licenses/GPL-3.0.txt",
+      "origem": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt",
+      "sha256_original": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    }
+  ]
+}

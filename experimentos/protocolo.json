@@ -1,0 +1,21 @@
+{
+  "versao": "0.1-proposta",
+  "status": "planejado_nao_executado",
+  "data": "2026-10-09",
+  "pergunta": "Em que situacoes a coordenacao melhora o resultado coletivo e compensa seu custo?",
+  "comparacao_inicial": ["S0_independente", "S1_reservas_compartilhadas"],
+  "extensao_organizacional": "S1 versus S2 com a mesma politica de alocacao e confirmacao",
+  "familias_mapas": ["aberto", "gargalos", "recursos_disputados"],
+  "sementes_propostas": [1,2,3,4,5,6,7,8,9,10],
+  "trocar_lados": true,
+  "partidas_planejadas_comparacao_inicial": 60,
+  "agentes_por_equipe": 4,
+  "limite_passos": null,
+  "meta_eficacia": null,
+  "observacao_parametros": "Limite de passos e meta de eficacia serao fixados no piloto, antes da campanha principal.",
+  "controle": ["mesmo ambiente", "mesmo limite de passos", "percepcao permitida", "resolucao reproduzivel de conflitos", "sementes separadas por fonte de aleatoriedade", "falhas indexadas por passo e agente quando emparelhadas"],
+  "metricas": ["quantidade depositada", "valor depositado", "acoes consumidas incluindo falhas e espera", "mensagens e operacoes de coordenacao", "tempo de CPU", "reservas duplicadas", "missoes inconclusivas", "conclusoes sem evidencia", "tempo de recuperacao"],
+  "regra_analise": "Manter todas as partidas; apresentar diferencas emparelhadas e dispersao; nao prometer significancia com dez sementes.",
+  "adendo": "Comparar recuperacao sob perturbacao controlada e mesma politica, com e sem organizacao. Nao confundir algoritmo de recuperacao com efeito de Moise.",
+  "sem_resultados_simulados": true
+}

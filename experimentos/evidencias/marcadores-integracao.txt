@@ -1,0 +1,5 @@
+[auditor] GOLD_MINERS|PERCEPTION|gold=1,1
+[auditor] GOLD_MINERS|PICK|carrying=true
+[auditor] GOLD_MINERS|END|status=ok
+GOLD_MINERS|WORLD_VERIFIED|deposited=1|carrying=false|conservation=ok
+GOLD_MINERS|MODEL_CHECKS|passed=10

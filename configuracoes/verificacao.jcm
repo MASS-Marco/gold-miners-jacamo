@@ -1,0 +1,9 @@
+mas verificacao_gold_miners {
+    agent auditor: src/test/agt/verificacao.asl {
+        focus: mining.m1view, mining.probe
+    }
+    workspace mining {
+        artifact m1view: mining.MiningPlanet(3,0)
+        artifact probe: mining.ValidationProbe
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "data_utc": "2026-10-09T16:03:56.553110+00:00",
+  "status": "aprovado",
+  "conferencias": 12,
+  "saida": "INDICADORES_APROVADOS | calculos, prazo, origem, zero e entradas invalidas conferidos",
+  "origem_dados": "ilustrativo",
+  "coleta_automatica_simulador": false,
+  "sha256": {
+    "scripts/indicadores.py": "25b6a69867451f75d64422668d142b8ea62eda9213260c7f2f5fe940fc0a39e8",
+    "scripts/verificar_indicadores.py": "4aa7115df340e3f2c7cf1488568e5e04750938abe9986796fc6bd17fa84cfc2a",
+    "experimentos/exemplo-indicadores.json": "8140fc61115a9af9d4618f11c4c7fbda8ec16000bf1b1a9fc27cfa0bedde46a1"
+  }
+}

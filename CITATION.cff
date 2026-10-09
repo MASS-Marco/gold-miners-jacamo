@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Material local de estudo derivado do tutorial Gold Miners do JaCaMo; consulte NOTICE.md para citar também a base oficial."
+title: "Gold Miners: laboratório de Sistemas Multiagentes"
+authors:
+  - family-names: "Santos de Souza"
+    given-names: "Marco Aurélio"
+version: "0.1-preparacao"
+date-released: "2026-10-09"
+type: software
+abstract: "Preparação individual para estudo: tutorial JaCaMo, verificação funcional e proposta de coordenação e organização. A competição entre duas equipes ainda não foi implementada."

@@ -1,0 +1,16 @@
+{
+  "origem": "ilustrativo",
+  "observacao": "Numeros inventados para compreender os calculos; nao sao resultados do Gold Miners executado.",
+  "pares": [
+    {
+      "id": "aberto",
+      "referencia": {"contexto":"mapa_aberto","semente":1,"orientacao":"A","meta_valor":25,"limite_passos":100,"passo_final":100,"valor_confirmado":20,"acoes_consumidas":100},
+      "candidata": {"contexto":"mapa_aberto","semente":1,"orientacao":"A","meta_valor":25,"limite_passos":100,"passo_final":100,"valor_confirmado":26,"acoes_consumidas":90}
+    },
+    {
+      "id": "gargalo",
+      "referencia": {"contexto":"mapa_com_gargalo","semente":2,"orientacao":"B","meta_valor":25,"limite_passos":100,"passo_final":100,"valor_confirmado":15,"acoes_consumidas":100},
+      "candidata": {"contexto":"mapa_com_gargalo","semente":2,"orientacao":"B","meta_valor":25,"limite_passos":100,"passo_final":100,"valor_confirmado":22,"acoes_consumidas":95}
+    }
+  ]
+}

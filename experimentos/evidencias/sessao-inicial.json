@@ -1,0 +1,11 @@
+{
+  "modo": "coletar",
+  "cenario": 3,
+  "duracao_limite_segundos": 15,
+  "encerrado_pelo_limite": true,
+  "codigo_processo": 1,
+  "erro_detectado": false,
+  "observacao": "Sessao de estudo; encerramento por tempo nao significa que todo o ouro foi coletado.",
+  "execucao_local": "20261009-122146-200220-tutorial",
+  "estado": "sessao_de_estudo_executada_sem_erro_detectado"
+}

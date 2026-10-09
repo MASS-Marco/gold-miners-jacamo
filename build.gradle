@@ -1,0 +1,35 @@
+plugins { id 'java' }
+group = 'br.ufsc.sma'
+version = '0.1.0'
+defaultTasks 'run'
+repositories {
+    maven { url 'https://raw.githubusercontent.com/jacamo-lang/mvn-repo/master' }
+    maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+    mavenCentral()
+}
+dependencies {
+    implementation 'org.jacamo:jacamo:1.3.0'
+    implementation files('lib/search.jar')
+}
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+sourceSets {
+    main.java.srcDirs = ['src/env', 'src/agt']
+    test.java.srcDirs = ['src/test/java']
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.register('run', JavaExec) {
+    dependsOn classes
+    mainClass = 'jacamo.infra.JaCaMoLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+    args(project.findProperty('jcm') ?: 'gold_miners.jcm')
+    systemProperty 'goldminers.headless', project.findProperty('headless') ?: 'true'
+    systemProperty 'java.awt.headless', project.findProperty('headless') ?: 'true'
+    systemProperty 'file.encoding', 'UTF-8'
+}
+tasks.register('runtimeClasspath') {
+    dependsOn testClasses
+    doLast {
+        file('build/runtime-classpath.txt').text = sourceSets.main.runtimeClasspath.asPath
+        file('build/test-runtime-classpath.txt').text = sourceSets.test.runtimeClasspath.asPath
+    }
+}
