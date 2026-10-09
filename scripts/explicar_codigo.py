@@ -4,6 +4,68 @@ import re
 
 ROOT=Path(__file__).resolve().parents[1]
 
+IMPORTS={
+ 'Path':'Trabalha com caminhos e arquivos sem montar separadores manualmente.',
+ 'datetime':'Registra a data e a hora das evidências.', 'timezone':'Permite identificar explicitamente horários em UTC.',
+ 'argparse':'Lê comandos e opções digitados no terminal, com ajuda e validação de argumentos.',
+ 'hashlib':'Calcula hashes para reconhecer a versão exata de um arquivo.',
+ 'json':'Lê e grava configurações e resultados em JSON.',
+ 'os':'Consulta informações do sistema e prepara cópias das variáveis do processo.',
+ 're':'Reconhece padrões de texto, como mensagens de erro nos registros.',
+ 'shutil':'Copia arquivos e procura programas disponíveis no ambiente.',
+ 'subprocess':'Inicia e acompanha Java e Gradle sem executar comandos de outros processos.',
+ 'sys':'Disponibiliza informações do interpretador Python; conferir se o recurso é necessário antes de mantê-lo numa revisão.',
+ 'io':'Permite ler o ZIP baixado diretamente da memória.',
+ 'urllib.request':'Obtém a dependência do endereço oficial indicado no programa.',
+ 'zipfile':'Lê o pacote ZIP e seleciona somente a biblioteca necessária.',
+ 'math':'Permite rejeitar medidas que sejam infinitas ou indefinidas.',
+ 'copy':'Cria cópias independentes dos exemplos para testar entradas inválidas sem alterar a referência.',
+ 'GridWorldModel':'Fornece a representação básica de um mundo em grade, posições e ocupação.',
+ 'GridWorldView':'Fornece a janela e a superfície de desenho para um mundo em grade.',
+ 'Location':'Representa coordenadas e oferece operações de posição e distância.',
+ 'HashSet':'Oferece um conjunto que não mantém elementos duplicados.',
+ 'Set':'Define a interface de conjuntos usada para registrar os portadores de ouro.',
+ 'Logger':'Permite escrever informações e avisos para acompanhar a execução.',
+ 'Move':'Traz os nomes das quatro direções definidos no artefato MiningPlanet.',
+ 'DefaultInternalAction':'Fornece a base Java para criar uma ação interna chamável em AgentSpeak.',
+ 'TransitionSystem':'Dá acesso ao contexto de execução do agente Jason.',
+ 'Unifier':'Relaciona os termos e variáveis AgentSpeak com os resultados produzidos em Java.',
+ 'Atom':'Representa um símbolo AgentSpeak, como uma direção de movimento.',
+ 'NumberTerm':'Representa um termo numérico recebido ou avaliado pelo agente.',
+ 'NumberTermImpl':'Cria um termo numérico para devolver um resultado ao AgentSpeak.',
+ 'Term':'Representa os argumentos simbólicos das ações internas.',
+ 'JasonException':'Permite comunicar erros de uso de uma ação interna ao Jason.',
+ 'Random':'Produz os sorteios usados na exploração; esta base ainda não controla a semente pela configuração.',
+ 'Iterator':'Oferece resultados sucessivos à consulta que pede números aleatórios.',
+ 'WorldModel':'Traz o modelo do domínio. O uso global pela política é uma limitação conhecida do tutorial.',
+ 'AEstrela':'Traz a implementação do algoritmo A* usada no cálculo de direção.',
+ 'Busca':'Define a interface de busca usada para executar o algoritmo selecionado.',
+ 'Estado':'Representa um estado do problema de busca.',
+ 'Heuristica':'Define como fornecer uma estimativa de custo restante à busca.',
+ 'Nodo':'Representa um nó e seu vínculo com o pai no caminho encontrado.',
+ 'ArrayList':'Cria uma lista redimensionável, usada para reunir sucessores.',
+ 'List':'Define o tipo de lista usado para os estados candidatos.',
+ 'Artifact':'Fornece a base para construir um artefato CArtAgO.',
+ 'OPERATION':'Marca um método como operação do artefato acessível aos agentes.',
+ 'ObsProperty':'Representa uma propriedade observável do artefato.',
+ 'Graphics':'Oferece as operações de desenho usadas pela visualização.',
+ 'Color':'Representa as cores usadas para distinguir objetos e estados.',
+ 'JLabel':'Exibe um texto curto, como posição do mouse ou total depositado.',
+ 'JPanel':'Agrupa componentes da janela.',
+ 'JSlider':'Oferece o controle deslizante da velocidade de execução.',
+ 'BorderFactory':'Cria bordas para separar os painéis da interface.',
+ 'BoxLayout':'Organiza componentes em uma linha ou coluna.',
+ 'FlowLayout':'Organiza componentes em sequência dentro de um painel.',
+ 'BorderLayout':'Distribui componentes entre regiões da janela.',
+ 'Component':'Representa um elemento visual da interface.',
+ 'Hashtable':'Relaciona valores do controle deslizante aos rótulos exibidos.',
+ 'MouseEvent':'Contém as informações de um evento do mouse.',
+ 'MouseListener':'Define os tratamentos para clique e outros eventos do mouse.',
+ 'MouseMotionListener':'Define os tratamentos para deslocamento e arrasto do mouse.',
+ 'ChangeEvent':'Representa uma mudança em um componente, como o controle de velocidade.',
+ 'ChangeListener':'Permite reagir às mudanças do controle de velocidade.'
+}
+
 PURPOSES={
  'miner.asl':'Explora o mapa e escolhe destinos. Comece pelos planos de free, near e next_step; esta versão não faz a entrega de ouro.',
  'miner-coleta.asl':'Acrescenta memória das descobertas, escolha de alvo, coleta e depósito. O depósito 0,0 e a consulta global de caminhos ainda são limitações do exemplo.',
@@ -170,7 +232,13 @@ def explain(path,line,context):
         return EXACT[s]
     if re.fullmatch(r'[{}\[\]();,]+',s):return 'Fecha ou delimita o bloco/estrutura iniciado nas linhas anteriores.'
     if s.startswith('package '):return 'Agrupa a classe no pacote '+s[8:].rstrip(';')+', usado para localizá-la no projeto.'
-    if s.startswith(('import ','from ')):return 'Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.'
+    if s.startswith(('import ','from ')):
+        name=s.split('import ',1)[-1].strip().rstrip(';')
+        names=[n.strip() for n in name.split(',')]
+        notes=[IMPORTS.get(n,IMPORTS.get(n.split('.')[-1])) for n in names]
+        if all(notes):return ' '.join(notes)
+        if name=='avaliar, comparar':return 'Reutiliza os cálculos do módulo de indicadores para conferir seus resultados e casos de erro.'
+        return 'Disponibiliza '+name+' para as operações deste arquivo.'
     if s.startswith('def '):
         name=re.findall(r'def (\w+)',s)[0]
         return 'Define a função para '+METHODS.get(name,'organizar esta etapa de execução')+'. Os parâmetros são os dados que a chamada recebe.'
@@ -182,7 +250,8 @@ def explain(path,line,context):
         description='preparar o cenário '+name[-1] if re.fullmatch(r'world\d',name) else purpose(path,name)
         return 'Inicia o método para '+description+'.'
     if s.startswith('@OPERATION'):return 'Expõe uma operação do artefato aos agentes; as condições e o efeito ficam no corpo indicado.'
-    if s.startswith('@'):return 'Identifica ou configura o plano/método. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.'
+    if s.startswith('@SuppressWarnings'):return 'Dispensa o aviso de serialização herdado da interface Swing; não altera as regras da simulação.'
+    if s.startswith('@'):return 'Identifica ou configura o plano. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.'
     if s.startswith(('+!','-!')):
         name=re.findall(r'[-+]!(\w+)',s)[0]
         return ('Trata a falha do objetivo de ' if s.startswith('-!') else 'Oferece um plano para ')+GOALS.get(name,name)+('. O trecho após os dois-pontos é o contexto de seleção.' if ':' in s else '.')
@@ -252,6 +321,7 @@ def explain(path,line,context):
     if s.startswith('suc('):return 'Propõe um dos movimentos vizinhos para a busca; a rotina suc decide se o estado pode entrar na lista.'
     if 'rnd.nextInt' in s or 'random.nextInt' in s:return 'Sorteia um inteiro abaixo do limite informado. O valor do limite não é incluído no sorteio.'
     if 'subprocess.' in s:return 'Executa ou configura um processo externo. Os argumentos, ambiente, captura de saída e prazo aparecem nesta chamada.'
+    if s.startswith('try:'):return 'Tenta concluir esta chamada dentro do tratamento de erros que vem a seguir; wait acompanha o processo até terminar ou atingir o prazo.'
     if 'hashlib.sha256' in s:return 'Calcula o resumo SHA-256 para identificar exatamente os bytes verificados, sem interpretar o conteúdo como código.'
     if 'json.loads' in s:return 'Lê a estrutura JSON de entrada para trabalhar com os seus campos.'
     if 'json.dumps' in s:return 'Converte a estrutura de dados para JSON legível, preservando a identificação da origem dos números.'

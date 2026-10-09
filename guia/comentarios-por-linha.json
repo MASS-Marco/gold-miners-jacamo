@@ -972,7 +972,7 @@
       {
         "line": 117,
         "code": "@pgold[atomic]           // atomic: so as not to handle another event until handle gold is initialised",
-        "explanation": "Identifica ou configura o plano/método. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
+        "explanation": "Identifica ou configura o plano. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
         "kind": "code"
       },
       {
@@ -1092,7 +1092,7 @@
       {
         "line": 137,
         "code": "@pih1[atomic]",
-        "explanation": "Identifica ou configura o plano/método. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
+        "explanation": "Identifica ou configura o plano. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
         "kind": "code"
       },
       {
@@ -1128,7 +1128,7 @@
       {
         "line": 143,
         "code": "@pih2[atomic]",
-        "explanation": "Identifica ou configura o plano/método. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
+        "explanation": "Identifica ou configura o plano. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
         "kind": "code"
       },
       {
@@ -2346,43 +2346,43 @@
       {
         "line": 3,
         "code": "import jason.asSemantics.DefaultInternalAction;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base Java para criar uma ação interna chamável em AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import jason.asSemantics.TransitionSystem;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Dá acesso ao contexto de execução do agente Jason.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import jason.asSemantics.Unifier;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Relaciona os termos e variáveis AgentSpeak com os resultados produzidos em Java.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import jason.asSyntax.NumberTerm;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um termo numérico recebido ou avaliado pelo agente.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import jason.asSyntax.NumberTermImpl;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Cria um termo numérico para devolver um resultado ao AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import jason.asSyntax.Term;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa os argumentos simbólicos das ações internas.",
         "kind": "code"
       },
       {
         "line": 9,
         "code": "import jason.environment.grid.Location;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa coordenadas e oferece operações de posição e distância.",
         "kind": "code"
       },
       {
@@ -2514,49 +2514,49 @@
       {
         "line": 3,
         "code": "import jason.asSemantics.DefaultInternalAction;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base Java para criar uma ação interna chamável em AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import jason.asSemantics.TransitionSystem;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Dá acesso ao contexto de execução do agente Jason.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import jason.asSemantics.Unifier;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Relaciona os termos e variáveis AgentSpeak com os resultados produzidos em Java.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import jason.asSyntax.Atom;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um símbolo AgentSpeak, como uma direção de movimento.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import jason.asSyntax.NumberTerm;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um termo numérico recebido ou avaliado pelo agente.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import jason.asSyntax.Term;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa os argumentos simbólicos das ações internas.",
         "kind": "code"
       },
       {
         "line": 9,
         "code": "import jason.environment.grid.GridWorldModel;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a representação básica de um mundo em grade, posições e ocupação.",
         "kind": "code"
       },
       {
         "line": 10,
         "code": "import jason.environment.grid.Location;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa coordenadas e oferece operações de posição e distância.",
         "kind": "code"
       },
       {
@@ -2568,13 +2568,13 @@
       {
         "line": 12,
         "code": "import java.util.ArrayList;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Cria uma lista redimensionável, usada para reunir sucessores.",
         "kind": "code"
       },
       {
         "line": 13,
         "code": "import java.util.List;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Define o tipo de lista usado para os estados candidatos.",
         "kind": "code"
       },
       {
@@ -2586,37 +2586,37 @@
       {
         "line": 15,
         "code": "import mining.WorldModel;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Traz o modelo do domínio. O uso global pela política é uma limitação conhecida do tutorial.",
         "kind": "code"
       },
       {
         "line": 16,
         "code": "import busca.AEstrela;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Traz a implementação do algoritmo A* usada no cálculo de direção.",
         "kind": "code"
       },
       {
         "line": 17,
         "code": "import busca.Busca;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Define a interface de busca usada para executar o algoritmo selecionado.",
         "kind": "code"
       },
       {
         "line": 18,
         "code": "import busca.Estado;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um estado do problema de busca.",
         "kind": "code"
       },
       {
         "line": 19,
         "code": "import busca.Heuristica;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Define como fornecer uma estimativa de custo restante à busca.",
         "kind": "code"
       },
       {
         "line": 20,
         "code": "import busca.Nodo;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um nó e seu vínculo com o pai no caminho encontrado.",
         "kind": "code"
       },
       {
@@ -3324,37 +3324,37 @@
       {
         "line": 3,
         "code": "import jason.asSemantics.DefaultInternalAction;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base Java para criar uma ação interna chamável em AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import jason.asSemantics.TransitionSystem;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Dá acesso ao contexto de execução do agente Jason.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import jason.asSemantics.Unifier;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Relaciona os termos e variáveis AgentSpeak com os resultados produzidos em Java.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import jason.asSyntax.NumberTerm;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um termo numérico recebido ou avaliado pelo agente.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import jason.asSyntax.Term;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa os argumentos simbólicos das ações internas.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import jason.environment.grid.Location;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa coordenadas e oferece operações de posição e distância.",
         "kind": "code"
       },
       {
@@ -3486,43 +3486,43 @@
       {
         "line": 3,
         "code": "import jason.JasonException;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Permite comunicar erros de uso de uma ação interna ao Jason.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import jason.asSemantics.DefaultInternalAction;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base Java para criar uma ação interna chamável em AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import jason.asSemantics.TransitionSystem;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Dá acesso ao contexto de execução do agente Jason.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import jason.asSemantics.Unifier;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Relaciona os termos e variáveis AgentSpeak com os resultados produzidos em Java.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import jason.asSyntax.NumberTermImpl;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Cria um termo numérico para devolver um resultado ao AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import jason.asSyntax.NumberTerm;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um termo numérico recebido ou avaliado pelo agente.",
         "kind": "code"
       },
       {
         "line": 9,
         "code": "import jason.asSyntax.Term;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa os argumentos simbólicos das ações internas.",
         "kind": "code"
       },
       {
@@ -3534,13 +3534,13 @@
       {
         "line": 11,
         "code": "import java.util.Random;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Produz os sorteios usados na exploração; esta base ainda não controla a semente pela configuração.",
         "kind": "code"
       },
       {
         "line": 12,
         "code": "import java.util.Iterator;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Oferece resultados sucessivos à consulta que pede números aleatórios.",
         "kind": "code"
       },
       {
@@ -3822,37 +3822,37 @@
       {
         "line": 3,
         "code": "import jason.asSemantics.DefaultInternalAction;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base Java para criar uma ação interna chamável em AgentSpeak.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import jason.asSemantics.TransitionSystem;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Dá acesso ao contexto de execução do agente Jason.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import jason.asSemantics.Unifier;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Relaciona os termos e variáveis AgentSpeak com os resultados produzidos em Java.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import jason.asSyntax.Atom;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um símbolo AgentSpeak, como uma direção de movimento.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import jason.asSyntax.NumberTerm;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um termo numérico recebido ou avaliado pelo agente.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import jason.asSyntax.Term;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa os argumentos simbólicos das ações internas.",
         "kind": "code"
       },
       {
@@ -3864,7 +3864,7 @@
       {
         "line": 10,
         "code": "import java.util.Random;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Produz os sorteios usados na exploração; esta base ainda não controla a semente pela configuração.",
         "kind": "code"
       },
       {
@@ -3876,7 +3876,7 @@
       {
         "line": 12,
         "code": "import mining.WorldModel;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Traz o modelo do domínio. O uso global pela política é uma limitação conhecida do tutorial.",
         "kind": "code"
       },
       {
@@ -4182,19 +4182,19 @@
       {
         "line": 4,
         "code": "import jason.asSyntax.Atom;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um símbolo AgentSpeak, como uma direção de movimento.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import jason.asSyntax.Term;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa os argumentos simbólicos das ações internas.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import jason.environment.grid.Location;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa coordenadas e oferece operações de posição e distância.",
         "kind": "code"
       },
       {
@@ -4206,7 +4206,7 @@
       {
         "line": 8,
         "code": "import java.util.logging.Logger;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Permite escrever informações e avisos para acompanhar a execução.",
         "kind": "code"
       },
       {
@@ -4218,19 +4218,19 @@
       {
         "line": 10,
         "code": "import cartago.Artifact;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base para construir um artefato CArtAgO.",
         "kind": "code"
       },
       {
         "line": 11,
         "code": "import cartago.OPERATION;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Marca um método como operação do artefato acessível aos agentes.",
         "kind": "code"
       },
       {
         "line": 12,
         "code": "import cartago.ObsProperty;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa uma propriedade observável do artefato.",
         "kind": "code"
       },
       {
@@ -5136,13 +5136,13 @@
       {
         "line": 3,
         "code": "import jason.environment.grid.GridWorldModel;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a representação básica de um mundo em grade, posições e ocupação.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import jason.environment.grid.Location;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa coordenadas e oferece operações de posição e distância.",
         "kind": "code"
       },
       {
@@ -5154,19 +5154,19 @@
       {
         "line": 6,
         "code": "import java.util.HashSet;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Oferece um conjunto que não mantém elementos duplicados.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import java.util.Set;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Define a interface de conjuntos usada para registrar os portadores de ouro.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import java.util.logging.Logger;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Permite escrever informações e avisos para acompanhar a execução.",
         "kind": "code"
       },
       {
@@ -5178,7 +5178,7 @@
       {
         "line": 10,
         "code": "import mining.MiningPlanet.Move;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Traz os nomes das quatro direções definidos no artefato MiningPlanet.",
         "kind": "code"
       },
       {
@@ -8184,7 +8184,7 @@
       {
         "line": 3,
         "code": "import jason.environment.grid.GridWorldView;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a janela e a superfície de desenho para um mundo em grade.",
         "kind": "code"
       },
       {
@@ -8196,55 +8196,55 @@
       {
         "line": 5,
         "code": "import java.awt.BorderLayout;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Distribui componentes entre regiões da janela.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import java.awt.Color;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa as cores usadas para distinguir objetos e estados.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import java.awt.Component;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa um elemento visual da interface.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import java.awt.FlowLayout;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Organiza componentes em sequência dentro de um painel.",
         "kind": "code"
       },
       {
         "line": 9,
         "code": "import java.awt.Graphics;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Oferece as operações de desenho usadas pela visualização.",
         "kind": "code"
       },
       {
         "line": 10,
         "code": "import java.awt.event.MouseEvent;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Contém as informações de um evento do mouse.",
         "kind": "code"
       },
       {
         "line": 11,
         "code": "import java.awt.event.MouseListener;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Define os tratamentos para clique e outros eventos do mouse.",
         "kind": "code"
       },
       {
         "line": 12,
         "code": "import java.awt.event.MouseMotionListener;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Define os tratamentos para deslocamento e arrasto do mouse.",
         "kind": "code"
       },
       {
         "line": 13,
         "code": "import java.util.Hashtable;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Relaciona valores do controle deslizante aos rótulos exibidos.",
         "kind": "code"
       },
       {
@@ -8256,43 +8256,43 @@
       {
         "line": 15,
         "code": "import javax.swing.BorderFactory;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Cria bordas para separar os painéis da interface.",
         "kind": "code"
       },
       {
         "line": 16,
         "code": "import javax.swing.BoxLayout;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Organiza componentes em uma linha ou coluna.",
         "kind": "code"
       },
       {
         "line": 17,
         "code": "import javax.swing.JLabel;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Exibe um texto curto, como posição do mouse ou total depositado.",
         "kind": "code"
       },
       {
         "line": 18,
         "code": "import javax.swing.JPanel;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Agrupa componentes da janela.",
         "kind": "code"
       },
       {
         "line": 19,
         "code": "import javax.swing.JSlider;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Oferece o controle deslizante da velocidade de execução.",
         "kind": "code"
       },
       {
         "line": 20,
         "code": "import javax.swing.event.ChangeEvent;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Representa uma mudança em um componente, como o controle de velocidade.",
         "kind": "code"
       },
       {
         "line": 21,
         "code": "import javax.swing.event.ChangeListener;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Permite reagir às mudanças do controle de velocidade.",
         "kind": "code"
       },
       {
@@ -8310,7 +8310,7 @@
       {
         "line": 24,
         "code": "@SuppressWarnings(\"serial\")",
-        "explanation": "Identifica ou configura o plano/método. Em planos atomic, a atomicidade é local ao agente, sem garantir exclusão entre mineradores.",
+        "explanation": "Dispensa o aviso de serialização herdado da interface Swing; não altera as regras da simulação.",
         "kind": "code"
       },
       {
@@ -9672,13 +9672,13 @@
       {
         "line": 3,
         "code": "import cartago.Artifact;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Fornece a base para construir um artefato CArtAgO.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import cartago.OPERATION;",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Marca um método como operação do artefato acessível aos agentes.",
         "kind": "code"
       },
       {
@@ -9786,79 +9786,79 @@
       {
         "line": 2,
         "code": "from pathlib import Path",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Trabalha com caminhos e arquivos sem montar separadores manualmente.",
         "kind": "code"
       },
       {
         "line": 3,
         "code": "from datetime import datetime, timezone",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Registra a data e a hora das evidências. Permite identificar explicitamente horários em UTC.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import argparse",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Lê comandos e opções digitados no terminal, com ajuda e validação de argumentos.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import hashlib",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Calcula hashes para reconhecer a versão exata de um arquivo.",
         "kind": "code"
       },
       {
         "line": 6,
         "code": "import json",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Lê e grava configurações e resultados em JSON.",
         "kind": "code"
       },
       {
         "line": 7,
         "code": "import os",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Consulta informações do sistema e prepara cópias das variáveis do processo.",
         "kind": "code"
       },
       {
         "line": 8,
         "code": "import re",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Reconhece padrões de texto, como mensagens de erro nos registros.",
         "kind": "code"
       },
       {
         "line": 9,
         "code": "import shutil",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Copia arquivos e procura programas disponíveis no ambiente.",
         "kind": "code"
       },
       {
         "line": 10,
         "code": "import subprocess",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Inicia e acompanha Java e Gradle sem executar comandos de outros processos.",
         "kind": "code"
       },
       {
         "line": 11,
         "code": "import sys",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Disponibiliza informações do interpretador Python; conferir se o recurso é necessário antes de mantê-lo numa revisão.",
         "kind": "code"
       },
       {
         "line": 12,
         "code": "import io",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Permite ler o ZIP baixado diretamente da memória.",
         "kind": "code"
       },
       {
         "line": 13,
         "code": "import urllib.request",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Obtém a dependência do endereço oficial indicado no programa.",
         "kind": "code"
       },
       {
         "line": 14,
         "code": "import zipfile",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Lê o pacote ZIP e seleciona somente a biblioteca necessária.",
         "kind": "code"
       },
       {
@@ -10284,7 +10284,7 @@
       {
         "line": 85,
         "code": "        try: code = process.wait(timeout=seconds)",
-        "explanation": "Define ou atualiza try: code com a expressão à direita. Essa informação participa da rotina de iniciar o processo e encerrá-lo ao alcançar o limite de tempo.",
+        "explanation": "Tenta concluir esta chamada dentro do tratamento de erros que vem a seguir; wait acompanha o processo até terminar ou atingir o prazo.",
         "kind": "code"
       },
       {
@@ -10308,7 +10308,7 @@
       {
         "line": 89,
         "code": "            try: code = process.wait(timeout=8)",
-        "explanation": "Define ou atualiza try: code com a expressão à direita. Essa informação participa da rotina de iniciar o processo e encerrá-lo ao alcançar o limite de tempo.",
+        "explanation": "Tenta concluir esta chamada dentro do tratamento de erros que vem a seguir; wait acompanha o processo até terminar ou atingir o prazo.",
         "kind": "code"
       },
       {
@@ -10764,25 +10764,25 @@
       {
         "line": 2,
         "code": "from pathlib import Path",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Trabalha com caminhos e arquivos sem montar separadores manualmente.",
         "kind": "code"
       },
       {
         "line": 3,
         "code": "import argparse",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Lê comandos e opções digitados no terminal, com ajuda e validação de argumentos.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "import json",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Lê e grava configurações e resultados em JSON.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "import math",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Permite rejeitar medidas que sejam infinitas ou indefinidas.",
         "kind": "code"
       },
       {
@@ -11292,25 +11292,25 @@
       {
         "line": 2,
         "code": "import copy",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Cria cópias independentes dos exemplos para testar entradas inválidas sem alterar a referência.",
         "kind": "code"
       },
       {
         "line": 3,
         "code": "import json",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Lê e grava configurações e resultados em JSON.",
         "kind": "code"
       },
       {
         "line": 4,
         "code": "from pathlib import Path",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Trabalha com caminhos e arquivos sem montar separadores manualmente.",
         "kind": "code"
       },
       {
         "line": 5,
         "code": "from indicadores import avaliar, comparar",
-        "explanation": "Traz o recurso indicado para este arquivo; ele será usado pelas operações abaixo.",
+        "explanation": "Reutiliza os cálculos do módulo de indicadores para conferir seus resultados e casos de erro.",
         "kind": "code"
       },
       {
@@ -11424,7 +11424,7 @@
       {
         "line": 24,
         "code": "    try:",
-        "explanation": "Continua a estrutura de dados ou de parâmetros iniciada acima; o significado do valor é dado pela chave correspondente.",
+        "explanation": "Tenta concluir esta chamada dentro do tratamento de erros que vem a seguir; wait acompanha o processo até terminar ou atingir o prazo.",
         "kind": "code"
       },
       {
@@ -11472,7 +11472,7 @@
       {
         "line": 32,
         "code": "try:",
-        "explanation": "Continua a estrutura de dados ou de parâmetros iniciada acima; o significado do valor é dado pela chave correspondente.",
+        "explanation": "Tenta concluir esta chamada dentro do tratamento de erros que vem a seguir; wait acompanha o processo até terminar ou atingir o prazo.",
         "kind": "code"
       },
       {

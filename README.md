@@ -69,7 +69,7 @@ Outras diferenças estão em [alterações e limitações](docs/alteracoes-do-tu
 
 ## Materiais acadêmicos
 
-O enunciado, a proposta em HTML/PDF, quatro cadernos e o adendo permanecem no acervo acadêmico pessoal. Os modelos técnicos propostos no adendo estão em `docs/modelos` para apoiar o desenvolvimento.
+O enunciado, a proposta em HTML/PDF, cinco cadernos e o adendo permanecem no acervo acadêmico pessoal. Os modelos técnicos propostos no adendo estão em `docs/modelos` para apoiar o desenvolvimento.
 
 Prazos do PDF recebido: proposta **05/11/2026**; apresentação **04/12/2026**; relatório final **11/12/2026**. Laboratório inicial para estudo, com execução individual confirmada; a entrega acadêmica ainda será preparada.
 
